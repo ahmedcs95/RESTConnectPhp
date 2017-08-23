@@ -1,17 +1,14 @@
 package net.ekhtar.restconnectphp;
 
-import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 
 public class MainActivity extends AppCompatActivity {
@@ -30,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    URL url = new URL("http://developerhendy.16mb.com/hello.php");
-                    // URL url = new URL("http://ekhtar.net/hello.php");
+                    //URL url = new URL("http://developerhendy.16mb.com/hello.php");
+                    URL url = new URL("http://www.ekhtar.net/hello.php");
                     HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
                     InputStreamReader inputStreamReader = new InputStreamReader(urlConnection.getInputStream());
                     BufferedReader bufferedReader=new BufferedReader(inputStreamReader);
